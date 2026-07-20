@@ -1,0 +1,176 @@
+.guidance {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #faf8f3;
+}
+
+.bgLayer {
+  position: absolute;
+  inset: -8% 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.93) 0%,
+      rgba(255, 252, 245, 0.84) 42%,
+      rgba(250, 248, 243, 0.9) 100%
+    ),
+    radial-gradient(
+      ellipse 60% 45% at 70% 40%,
+      rgba(232, 200, 74, 0.13),
+      transparent 70%
+    );
+}
+
+.edgeTop,
+.edgeBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.edgeTop {
+  top: 0;
+  background: linear-gradient(180deg, rgba(250, 248, 243, 0.9), transparent);
+}
+
+.edgeBottom {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.88), transparent);
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+}
+
+.head {
+  max-width: 38rem;
+  margin-bottom: 1.5rem;
+  transform-style: preserve-3d;
+  perspective: 1100px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.ribbon {
+  height: 2px;
+  margin: 0 0 2.1rem;
+  overflow: hidden;
+}
+
+.ribbon span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-light),
+    var(--gold-deep),
+    var(--gold-light),
+    transparent
+  );
+  opacity: 0.55;
+}
+
+.stepGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+  perspective: 1600px;
+  transform-style: preserve-3d;
+}
+
+.stepCard {
+  position: relative;
+  padding: 2rem 1.6rem 1.8rem;
+  border-radius: calc(var(--radius) + 4px);
+  background: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.97),
+    rgba(255, 254, 251, 0.9)
+  );
+  border: 1px solid rgba(201, 162, 39, 0.28);
+  box-shadow:
+    0 20px 48px rgba(20, 20, 20, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.stepCard::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -30% auto;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(232, 200, 74, 0.14),
+    transparent 70%
+  );
+  pointer-events: none;
+  transform: translateZ(-10px);
+}
+
+.stepIndex {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: rgba(201, 162, 39, 0.48);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.9rem;
+  transform: translateZ(22px);
+}
+
+.stepCard h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--ink);
+  margin: 0 0 0.7rem;
+  transform: translateZ(28px);
+}
+
+.stepCard p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  transform: translateZ(18px);
+}
+
+@media (max-width: 980px) {
+  .stepGrid {
+    grid-template-columns: 1fr;
+    perspective: none;
+  }
+}

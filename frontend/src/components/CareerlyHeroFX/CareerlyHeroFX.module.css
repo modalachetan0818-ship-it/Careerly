@@ -1,0 +1,28 @@
+.fx {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Static grain — no continuous CSS animation (saves paint cost). */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: radial-gradient(
+    rgba(120, 95, 20, 0.9) 0.5px,
+    transparent 0.5px
+  );
+  background-size: 4px 4px;
+}

@@ -1,0 +1,112 @@
+.footer {
+  background: linear-gradient(180deg, #ffffff 0%, #fafaf8 100%);
+  color: var(--ink);
+  margin-top: auto;
+  border-top: 1px solid rgba(201, 162, 39, 0.22);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1.2fr;
+  gap: 2.5rem;
+  padding: 4rem 0 3rem;
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.logoImg {
+  width: 2.15rem;
+  height: 2.15rem;
+  object-fit: contain;
+  border-radius: 0.4rem;
+  display: block;
+  flex-shrink: 0;
+}
+
+.name {
+  font-family: var(--font-display);
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.tagline {
+  color: var(--gold-deep);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.mission {
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 28rem;
+}
+
+.social {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Neutralize the component's default outer padding so it aligns left. */
+.social > div {
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: var(--gold-deep);
+}
+
+.links,
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.links a:hover,
+.contact a:hover {
+  color: var(--gold);
+}
+
+.bottom {
+  border-top: 1px solid rgba(201, 162, 39, 0.18);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.bottomInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.15rem 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.pillars {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--gold-deep);
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+  }
+}

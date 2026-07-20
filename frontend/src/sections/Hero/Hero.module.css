@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.videoWrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Subtle bottom fade only — keeps CTAs readable without washing the video */
+.heroShade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    transparent 30%,
+    transparent 52%,
+    rgba(255, 255, 255, 0.45) 82%,
+    rgba(255, 255, 255, 0.65) 100%
+  );
+}
+
+/* Simple welcome text, centered near the top of the hero */
+.welcome {
+  position: absolute;
+  top: calc(var(--nav-h) + 0.25rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  text-align: center;
+}
+
+.welcomeText {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #141414;
+}
+
+.heroCopy {
+  position: relative;
+  z-index: 3;
+  width: min(920px, 100%);
+  margin-inline: auto;
+  padding: 0 0 3.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Centered logo video stage. Sits above the animated background, below CTAs. */
+.logoStage {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/*
+ * Transparent WebM (alpha keyed from the source frames) — no white box,
+ * so the gold logo sits cleanly over the animated background. Zoomed in.
+ */
+.logoVideo {
+  position: relative;
+  width: min(88vw, 900px);
+  height: auto;
+  max-height: 82vh;
+  object-fit: contain;
+  transform: translateY(-3%);
+  filter: drop-shadow(0 10px 40px rgba(201, 162, 39, 0.35));
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+}
+
+.ctaPrimary {
+  min-width: 10.5rem;
+  box-shadow: 0 12px 36px rgba(201, 162, 39, 0.4);
+}
+
+.ctaGhost {
+  min-width: 10.5rem;
+  border: 1.5px solid rgba(28, 25, 20, 0.22);
+  color: var(--ink, #1c1914);
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 0.9rem 1.55rem;
+  transition:
+    transform 0.25s var(--ease-out),
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.ctaGhost:hover {
+  border-color: var(--gold);
+  color: var(--gold-deep, #8a6a12);
+  background: rgba(201, 162, 39, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 560px) {
+  .heroCopy {
+    padding-bottom: 2.25rem;
+  }
+}

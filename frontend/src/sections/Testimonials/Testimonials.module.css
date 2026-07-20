@@ -1,0 +1,94 @@
+.testimonialsSection {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #fffefb;
+}
+
+.bgLayer {
+  position: absolute;
+  inset: -8% 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(255, 252, 245, 0.88) 42%,
+      rgba(247, 243, 232, 0.92) 100%
+    ),
+    radial-gradient(
+      ellipse 55% 42% at 50% 62%,
+      rgba(201, 162, 39, 0.12),
+      transparent 72%
+    );
+}
+
+.edgeTop,
+.edgeBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.edgeTop {
+  top: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), transparent);
+}
+
+.edgeBottom {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(255, 254, 251, 0.92), transparent);
+}
+
+.inner {
+  position: relative;
+  z-index: 3;
+}
+
+.head {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+
+.bookStage {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+}
+
+@media (max-width: 720px) {
+  .bookStage {
+    margin-top: 1.1rem;
+  }
+}

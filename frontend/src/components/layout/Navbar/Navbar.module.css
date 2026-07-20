@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  height: var(--nav-h);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 28px rgba(20, 20, 20, 0.05);
+  border-bottom-color: rgba(201, 162, 39, 0.18);
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.logoImg {
+  width: 2.45rem;
+  height: 2.45rem;
+  object-fit: contain;
+  border-radius: 0.45rem;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.navLink {
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.navLink:hover,
+.active {
+  color: var(--ink);
+  background: rgba(201, 162, 39, 0.12);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cta {
+  padding: 0.7rem 1.2rem;
+  font-size: 0.88rem;
+}
+
+.menuBtn {
+  display: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(201, 162, 39, 0.28);
+  background: rgba(255, 255, 255, 0.85);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.menuBtn span {
+  width: 1.1rem;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+}
+
+.mobileNav {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .desktopNav,
+  .cta {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.98);
+    border-bottom: 1px solid rgba(201, 162, 39, 0.16);
+    box-shadow: var(--shadow);
+  }
+
+  .mobileLink {
+    display: block;
+    padding: 0.85rem 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(20, 20, 20, 0.05);
+  }
+
+  .mobileLink.active {
+    color: var(--gold-deep);
+    background: transparent;
+  }
+
+  .mobileCta {
+    margin-top: 0.75rem;
+  }
+}

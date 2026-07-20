@@ -1,0 +1,10 @@
+export { Hero } from "./Hero/Hero";
+export { Stats } from "./Stats/Stats";
+export { Clients } from "./Clients/Clients";
+export { Features } from "./Features/Features";
+export { Pillars } from "./Pillars/Pillars";
+export { Atmosphere } from "./Atmosphere/Atmosphere";
+export { Mission } from "./Mission/Mission";
+export { Tracks } from "./Tracks/Tracks";
+export { Guidance } from "./Guidance/Guidance";
+export { Testimonials } from "./Testimonials/Testimonials";
