@@ -45,6 +45,18 @@ export function Footer() {
         </div>
 
         <div>
+          <h3 className={styles.heading}>Legal</h3>
+          <ul className={styles.links}>
+            <li>
+              <Link to="/privacy">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link to="/terms">Terms &amp; Conditions</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
           <h3 className={styles.heading}>Contact</h3>
           <ul className={styles.contact}>
             <li>

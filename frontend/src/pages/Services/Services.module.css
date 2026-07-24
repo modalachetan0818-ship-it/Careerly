@@ -1,94 +1,511 @@
 .page {
-  padding-top: 2.5rem;
-}
-
-.header {
-  max-width: 40rem;
-  margin-bottom: 2.5rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-
-.card {
-  padding: 1.6rem 1.5rem;
-  border-radius: var(--radius);
-  background: linear-gradient(155deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.9));
-  border: 1px solid rgba(201, 162, 39, 0.2);
-  box-shadow: 0 12px 30px rgba(20, 20, 20, 0.04);
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  align-items: flex-start;
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
-}
-
-.card:hover {
-  border-color: rgba(201, 162, 39, 0.5);
-  box-shadow: 0 18px 44px rgba(201, 162, 39, 0.14);
-}
-
-.index {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--gold-deep);
-}
-
-.card h2 {
-  font-size: 1.25rem;
-}
-
-.card p {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.cta {
-  margin-top: 3.5rem;
-  padding: 2.25rem 2rem;
-  border-radius: calc(var(--radius) + 4px);
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(201, 162, 39, 0.2), transparent 55%),
-    radial-gradient(ellipse at 90% 20%, rgba(232, 200, 74, 0.14), transparent 40%),
-    linear-gradient(120deg, #ffffff, #faf8f3);
-  border: 1px solid rgba(201, 162, 39, 0.28);
+  position: relative;
+  overflow-x: clip;
+  background: var(--white);
   color: var(--ink);
-  text-align: center;
-  box-shadow: var(--shadow-gold);
 }
 
-.cta h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 0.5rem;
+.page :global(.section-title) {
+  letter-spacing: -0.02em;
 }
 
-.cta p {
-  color: var(--muted);
-  margin-bottom: 1.35rem;
+.pageZone1 {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+.pageZone2 {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+}
+.pageZone3 {
+  position: relative;
+  z-index: 3;
+  isolation: isolate;
+}
+.pageZone4 {
+  position: relative;
+  z-index: 4;
+  isolation: isolate;
+}
+.pageZone5 {
+  position: relative;
+  z-index: 5;
+  isolation: isolate;
+}
+.pageZone6 {
+  position: relative;
+  z-index: 6;
+  isolation: isolate;
+}
+.pageZone7 {
+  position: relative;
+  z-index: 7;
+  isolation: isolate;
+}
+.pageZone8 {
+  position: relative;
+  z-index: 8;
+  isolation: isolate;
+}
+.pageZone9 {
+  position: relative;
+  z-index: 9;
+  isolation: isolate;
+}
+.pageZone10 {
+  position: relative;
+  z-index: 10;
+  isolation: isolate;
+}
+.pageZone11 {
+  position: relative;
+  z-index: 11;
+  isolation: isolate;
+}
+.pageZone12 {
+  position: relative;
+  z-index: 12;
+  isolation: isolate;
+}
+.pageZone13 {
+  position: relative;
+  z-index: 13;
+  isolation: isolate;
+}
+.pageZone14 {
+  position: relative;
+  z-index: 14;
+  isolation: isolate;
+}
+.pageZone15 {
+  position: relative;
+  z-index: 15;
+  isolation: isolate;
+}
+.pageZone16 {
+  position: relative;
+  z-index: 16;
+  isolation: isolate;
+}
+.pageZone17 {
+  position: relative;
+  z-index: 17;
+  isolation: isolate;
+}
+.pageZone18 {
+  position: relative;
+  z-index: 18;
+  isolation: isolate;
+}
+.pageZone19 {
+  position: relative;
+  z-index: 19;
+  isolation: isolate;
+}
+.pageZone20 {
+  position: relative;
+  z-index: 20;
+  isolation: isolate;
+}
+.pageZone21 {
+  position: relative;
+  z-index: 21;
+  isolation: isolate;
+}
+.pageZone22 {
+  position: relative;
+  z-index: 22;
+  isolation: isolate;
+}
+.pageZone23 {
+  position: relative;
+  z-index: 23;
+  isolation: isolate;
+}
+.pageZone24 {
+  position: relative;
+  z-index: 24;
+  isolation: isolate;
+}
+.pageZone25 {
+  position: relative;
+  z-index: 25;
+  isolation: isolate;
+}
+.pageZone26 {
+  position: relative;
+  z-index: 26;
+  isolation: isolate;
+}
+.pageZone27 {
+  position: relative;
+  z-index: 27;
+  isolation: isolate;
+}
+.pageZone28 {
+  position: relative;
+  z-index: 28;
+  isolation: isolate;
+}
+.pageZone29 {
+  position: relative;
+  z-index: 29;
+  isolation: isolate;
+}
+.pageZone30 {
+  position: relative;
+  z-index: 30;
+  isolation: isolate;
 }
 
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-  justify-content: center;
+.pageWash1 {
+  pointer-events: none;
+  position: absolute;
+  inset: 0% 0%;
+  background: radial-gradient(
+    ellipse at 20% 30%,
+    rgba(201, 162, 39, 0.03),
+    transparent 65%
+  );
+  transform: translateZ(-40px);
+}
+.pageWash2 {
+  pointer-events: none;
+  position: absolute;
+  inset: 1% 3%;
+  background: radial-gradient(
+    ellipse at 21% 31%,
+    rgba(201, 162, 39, 0.04),
+    transparent 65%
+  );
+  transform: translateZ(-42px);
+}
+.pageWash3 {
+  pointer-events: none;
+  position: absolute;
+  inset: 2% 6%;
+  background: radial-gradient(
+    ellipse at 22% 32%,
+    rgba(201, 162, 39, 0.05),
+    transparent 65%
+  );
+  transform: translateZ(-44px);
+}
+.pageWash4 {
+  pointer-events: none;
+  position: absolute;
+  inset: 3% 1%;
+  background: radial-gradient(
+    ellipse at 23% 33%,
+    rgba(201, 162, 39, 0.06),
+    transparent 65%
+  );
+  transform: translateZ(-46px);
+}
+.pageWash5 {
+  pointer-events: none;
+  position: absolute;
+  inset: 4% 4%;
+  background: radial-gradient(
+    ellipse at 24% 34%,
+    rgba(201, 162, 39, 0.07),
+    transparent 65%
+  );
+  transform: translateZ(-48px);
+}
+.pageWash6 {
+  pointer-events: none;
+  position: absolute;
+  inset: 0% 7%;
+  background: radial-gradient(
+    ellipse at 25% 35%,
+    rgba(201, 162, 39, 0.08),
+    transparent 65%
+  );
+  transform: translateZ(-50px);
+}
+.pageWash7 {
+  pointer-events: none;
+  position: absolute;
+  inset: 1% 2%;
+  background: radial-gradient(
+    ellipse at 26% 36%,
+    rgba(201, 162, 39, 0.03),
+    transparent 65%
+  );
+  transform: translateZ(-52px);
+}
+.pageWash8 {
+  pointer-events: none;
+  position: absolute;
+  inset: 2% 5%;
+  background: radial-gradient(
+    ellipse at 27% 37%,
+    rgba(201, 162, 39, 0.04),
+    transparent 65%
+  );
+  transform: translateZ(-54px);
+}
+.pageWash9 {
+  pointer-events: none;
+  position: absolute;
+  inset: 3% 0%;
+  background: radial-gradient(
+    ellipse at 28% 38%,
+    rgba(201, 162, 39, 0.05),
+    transparent 65%
+  );
+  transform: translateZ(-56px);
+}
+.pageWash10 {
+  pointer-events: none;
+  position: absolute;
+  inset: 4% 3%;
+  background: radial-gradient(
+    ellipse at 29% 39%,
+    rgba(201, 162, 39, 0.06),
+    transparent 65%
+  );
+  transform: translateZ(-58px);
+}
+.pageWash11 {
+  pointer-events: none;
+  position: absolute;
+  inset: 0% 6%;
+  background: radial-gradient(
+    ellipse at 30% 40%,
+    rgba(201, 162, 39, 0.07),
+    transparent 65%
+  );
+  transform: translateZ(-60px);
+}
+.pageWash12 {
+  pointer-events: none;
+  position: absolute;
+  inset: 1% 1%;
+  background: radial-gradient(
+    ellipse at 31% 41%,
+    rgba(201, 162, 39, 0.08),
+    transparent 65%
+  );
+  transform: translateZ(-62px);
+}
+.pageWash13 {
+  pointer-events: none;
+  position: absolute;
+  inset: 2% 4%;
+  background: radial-gradient(
+    ellipse at 32% 42%,
+    rgba(201, 162, 39, 0.03),
+    transparent 65%
+  );
+  transform: translateZ(-64px);
+}
+.pageWash14 {
+  pointer-events: none;
+  position: absolute;
+  inset: 3% 7%;
+  background: radial-gradient(
+    ellipse at 33% 43%,
+    rgba(201, 162, 39, 0.04),
+    transparent 65%
+  );
+  transform: translateZ(-66px);
+}
+.pageWash15 {
+  pointer-events: none;
+  position: absolute;
+  inset: 4% 2%;
+  background: radial-gradient(
+    ellipse at 34% 44%,
+    rgba(201, 162, 39, 0.05),
+    transparent 65%
+  );
+  transform: translateZ(-68px);
+}
+.pageWash16 {
+  pointer-events: none;
+  position: absolute;
+  inset: 0% 5%;
+  background: radial-gradient(
+    ellipse at 35% 45%,
+    rgba(201, 162, 39, 0.06),
+    transparent 65%
+  );
+  transform: translateZ(-70px);
+}
+.pageWash17 {
+  pointer-events: none;
+  position: absolute;
+  inset: 1% 0%;
+  background: radial-gradient(
+    ellipse at 36% 46%,
+    rgba(201, 162, 39, 0.07),
+    transparent 65%
+  );
+  transform: translateZ(-72px);
+}
+.pageWash18 {
+  pointer-events: none;
+  position: absolute;
+  inset: 2% 3%;
+  background: radial-gradient(
+    ellipse at 37% 47%,
+    rgba(201, 162, 39, 0.08),
+    transparent 65%
+  );
+  transform: translateZ(-74px);
+}
+.pageWash19 {
+  pointer-events: none;
+  position: absolute;
+  inset: 3% 6%;
+  background: radial-gradient(
+    ellipse at 38% 48%,
+    rgba(201, 162, 39, 0.03),
+    transparent 65%
+  );
+  transform: translateZ(-76px);
+}
+.pageWash20 {
+  pointer-events: none;
+  position: absolute;
+  inset: 4% 1%;
+  background: radial-gradient(
+    ellipse at 39% 49%,
+    rgba(201, 162, 39, 0.04),
+    transparent 65%
+  );
+  transform: translateZ(-78px);
+}
+.pageWash21 {
+  pointer-events: none;
+  position: absolute;
+  inset: 0% 4%;
+  background: radial-gradient(
+    ellipse at 40% 50%,
+    rgba(201, 162, 39, 0.05),
+    transparent 65%
+  );
+  transform: translateZ(-80px);
+}
+.pageWash22 {
+  pointer-events: none;
+  position: absolute;
+  inset: 1% 7%;
+  background: radial-gradient(
+    ellipse at 41% 51%,
+    rgba(201, 162, 39, 0.06),
+    transparent 65%
+  );
+  transform: translateZ(-82px);
+}
+.pageWash23 {
+  pointer-events: none;
+  position: absolute;
+  inset: 2% 2%;
+  background: radial-gradient(
+    ellipse at 42% 52%,
+    rgba(201, 162, 39, 0.07),
+    transparent 65%
+  );
+  transform: translateZ(-84px);
+}
+.pageWash24 {
+  pointer-events: none;
+  position: absolute;
+  inset: 3% 5%;
+  background: radial-gradient(
+    ellipse at 43% 53%,
+    rgba(201, 162, 39, 0.08),
+    transparent 65%
+  );
+  transform: translateZ(-86px);
+}
+
+@keyframes pageDrift1 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-2px, -3px, 0); }
+}
+@keyframes pageDrift2 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-1px, -4px, 0); }
+}
+@keyframes pageDrift3 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0px, -5px, 0); }
+}
+@keyframes pageDrift4 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(1px, -6px, 0); }
+}
+@keyframes pageDrift5 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(2px, -3px, 0); }
+}
+@keyframes pageDrift6 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-2px, -4px, 0); }
+}
+@keyframes pageDrift7 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-1px, -5px, 0); }
+}
+@keyframes pageDrift8 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0px, -6px, 0); }
+}
+@keyframes pageDrift9 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(1px, -3px, 0); }
+}
+@keyframes pageDrift10 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(2px, -4px, 0); }
+}
+@keyframes pageDrift11 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-2px, -5px, 0); }
+}
+@keyframes pageDrift12 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-1px, -6px, 0); }
+}
+@keyframes pageDrift13 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0px, -3px, 0); }
+}
+@keyframes pageDrift14 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(1px, -4px, 0); }
+}
+@keyframes pageDrift15 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(2px, -5px, 0); }
+}
+@keyframes pageDrift16 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-2px, -6px, 0); }
 }
 
 @media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
+  .page {
+    overflow-x: hidden;
   }
 }
 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr;
+@media (prefers-reduced-motion: reduce) {
+  .page * {
+    scroll-behavior: auto !important;
   }
+  .pageWash1 { display: none; }
+  .pageWash2 { display: none; }
+  .pageWash3 { display: none; }
+  .pageWash4 { display: none; }
+  .pageWash5 { display: none; }
+  .pageWash6 { display: none; }
+  .pageWash7 { display: none; }
+  .pageWash8 { display: none; }
 }

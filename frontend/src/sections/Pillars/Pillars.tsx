@@ -9,10 +9,10 @@ type Props = {
 };
 
 const PILLAR_IMAGES = [
-  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=640&q=60",
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=640&q=60",
-  "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=640&q=60",
-  "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=640&q=60",
+  "/home/pillars/01-learn.png",
+  "/home/pillars/02-grow.png",
+  "/home/pillars/03-achieve.png",
+  "/home/pillars/04-succeed.png",
 ];
 
 export function Pillars({ items }: Props) {
@@ -27,9 +27,8 @@ export function Pillars({ items }: Props) {
 
   return (
     <section className={`section ${styles.pillarsSection}`}>
-      <div className={styles.pillarsBg} aria-hidden>
-        <span className={styles.pillarsGlow} />
-      </div>
+      <div className={styles.bgPlate} aria-hidden />
+      <div className={styles.scrim} aria-hidden />
       <div className="container">
         <motion.div
           className={styles.sectionHead}

@@ -135,7 +135,7 @@ export function Testimonials({ items }: Props) {
           </h2>
           <div className="gold-rule" />
           <p className="section-lead">
-            Open the book — images on the left, voices on the right.
+            Real journeys from professionals who grew with Careerly.
           </p>
         </motion.div>
 

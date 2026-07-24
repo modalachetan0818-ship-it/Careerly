@@ -23,6 +23,12 @@ const About = lazy(() =>
 const Contact = lazy(() =>
   import("./pages/Contact").then((m) => ({ default: m.Contact })),
 );
+const Privacy = lazy(() =>
+  import("./pages/Privacy").then((m) => ({ default: m.Privacy })),
+);
+const Terms = lazy(() =>
+  import("./pages/Terms").then((m) => ({ default: m.Terms })),
+);
 
 export default function App() {
   return (
@@ -37,6 +43,8 @@ export default function App() {
             <Route path="services" element={<Services />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="privacy" element={<Privacy />} />
+            <Route path="terms" element={<Terms />} />
           </Route>
         </Routes>
       </Suspense>

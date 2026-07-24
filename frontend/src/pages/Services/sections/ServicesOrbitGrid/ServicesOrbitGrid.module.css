@@ -1,0 +1,94 @@
+.section {
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #faf8f3;
+}
+
+.bgPlate {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("/services/svc-grid-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.65;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.62) 0%,
+    rgba(250, 248, 243, 0.48) 45%,
+    rgba(255, 255, 255, 0.68) 100%
+  );
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.section :global(.container) {
+  position: relative;
+  z-index: 2;
+}
+
+.orbA {
+  position: absolute;
+  width: 42%;
+  height: 42%;
+  left: -8%;
+  top: 10%;
+  background: radial-gradient(circle, rgba(232, 200, 74, 0.16), transparent 68%);
+  filter: blur(20px);
+}
+
+.orbB {
+  position: absolute;
+  width: 36%;
+  height: 36%;
+  right: -6%;
+  bottom: 8%;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.14), transparent 70%);
+  filter: blur(24px);
+}
+
+.gridMesh {
+  position: absolute;
+  inset: 12% 5%;
+  background-image:
+    linear-gradient(rgba(201, 162, 39, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 162, 39, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 78%);
+  transform: perspective(900px) rotateX(58deg);
+  transform-origin: center top;
+  opacity: 0.7;
+}
+
+.stage {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gridMesh {
+    transform: none !important;
+  }
+}

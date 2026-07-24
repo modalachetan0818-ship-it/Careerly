@@ -374,27 +374,41 @@
 .pillarsSection {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   padding-block: clamp(4.5rem, 9vw, 8rem);
-  background:
-    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(232, 200, 74, 0.14), transparent 55%),
-    linear-gradient(180deg, #f7f3e8 0%, #fafaf8 40%, #ffffff 100%);
+  background: #faf8f3;
 }
 
-.pillarsBg {
+.bgPlate {
   position: absolute;
   inset: 0;
-  pointer-events: none;
   z-index: 0;
+  pointer-events: none;
+  background-image: url("/home/home-steps-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.65;
 }
 
-.pillarsGlow {
+.scrim {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  width: min(640px, 80vw);
-  height: 280px;
-  transform: translateX(-50%);
-  background: radial-gradient(ellipse, rgba(232, 200, 74, 0.16), transparent 70%);
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 20%, rgba(232, 200, 74, 0.1), transparent 50%),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(250, 248, 243, 0.42) 45%,
+      rgba(255, 255, 255, 0.62) 100%
+    );
+}
+
+.pillarsSection :global(.container) {
+  position: relative;
+  z-index: 2;
 }
 
 .pillarCarousel {
@@ -838,7 +852,6 @@
   .scrollHint span,
   .featuresOrb,
   .featuresOrbAlt,
-  .pillarsGlow,
   .pillarRing {
     animation: none;
   }

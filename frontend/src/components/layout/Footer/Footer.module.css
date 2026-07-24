@@ -7,7 +7,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr 1.2fr;
+  grid-template-columns: 1.4fr 0.75fr 0.75fr 1.15fr;
   gap: 2.5rem;
   padding: 4rem 0 3rem;
 }
@@ -101,6 +101,13 @@
   font-size: 0.72rem;
   color: var(--gold-deep);
   font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 800px) {

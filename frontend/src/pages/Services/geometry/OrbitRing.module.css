@@ -1,0 +1,192 @@
+.wrap {
+  position: relative;
+  transform-style: preserve-3d;
+  margin-inline: auto;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 162, 39, 0.28);
+  transform: rotateX(68deg);
+  transform-style: preserve-3d;
+}
+
+.node {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-deep));
+  transform: rotate(var(--a)) translateX(var(--d)) rotateX(-68deg);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.65);
+}
+
+.core {
+  position: absolute;
+  inset: 32%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.9), transparent 50%),
+    linear-gradient(145deg, rgba(232, 200, 74, 0.35), rgba(201, 162, 39, 0.15));
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  transform: translateZ(20px);
+}
+
+.halo {
+  position: absolute;
+  inset: 18%;
+  border-radius: 50%;
+  border: 1px dashed rgba(201, 162, 39, 0.25);
+  transform: translateZ(8px) rotateX(68deg);
+}
+
+.orbitSpeed1 {
+  animation-duration: 18s;
+}
+.orbitSpeed2 {
+  animation-duration: 19s;
+}
+.orbitSpeed3 {
+  animation-duration: 20s;
+}
+.orbitSpeed4 {
+  animation-duration: 21s;
+}
+.orbitSpeed5 {
+  animation-duration: 22s;
+}
+.orbitSpeed6 {
+  animation-duration: 23s;
+}
+.orbitSpeed7 {
+  animation-duration: 24s;
+}
+.orbitSpeed8 {
+  animation-duration: 25s;
+}
+.orbitSpeed9 {
+  animation-duration: 26s;
+}
+.orbitSpeed10 {
+  animation-duration: 27s;
+}
+.orbitSpeed11 {
+  animation-duration: 28s;
+}
+.orbitSpeed12 {
+  animation-duration: 29s;
+}
+.orbitSpeed13 {
+  animation-duration: 30s;
+}
+.orbitSpeed14 {
+  animation-duration: 31s;
+}
+.orbitSpeed15 {
+  animation-duration: 32s;
+}
+.orbitSpeed16 {
+  animation-duration: 33s;
+}
+.orbitSpeed17 {
+  animation-duration: 34s;
+}
+.orbitSpeed18 {
+  animation-duration: 35s;
+}
+.orbitSpeed19 {
+  animation-duration: 36s;
+}
+.orbitSpeed20 {
+  animation-duration: 37s;
+}
+.orbitSpeed21 {
+  animation-duration: 38s;
+}
+.orbitSpeed22 {
+  animation-duration: 39s;
+}
+.orbitSpeed23 {
+  animation-duration: 40s;
+}
+.orbitSpeed24 {
+  animation-duration: 41s;
+}
+
+@keyframes orbitPulse1 {
+  0%, 100% { opacity: 0.4; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.7; transform: rotateX(68deg) scale(1.02); }
+}
+@keyframes orbitPulse2 {
+  0%, 100% { opacity: 0.48000000000000004; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.75; transform: rotateX(68deg) scale(1.03); }
+}
+@keyframes orbitPulse3 {
+  0%, 100% { opacity: 0.56; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.7999999999999999; transform: rotateX(68deg) scale(1.04); }
+}
+@keyframes orbitPulse4 {
+  0%, 100% { opacity: 0.64; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.85; transform: rotateX(68deg) scale(1.02); }
+}
+@keyframes orbitPulse5 {
+  0%, 100% { opacity: 0.72; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.7; transform: rotateX(68deg) scale(1.03); }
+}
+@keyframes orbitPulse6 {
+  0%, 100% { opacity: 0.4; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.75; transform: rotateX(68deg) scale(1.04); }
+}
+@keyframes orbitPulse7 {
+  0%, 100% { opacity: 0.48000000000000004; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.7999999999999999; transform: rotateX(68deg) scale(1.02); }
+}
+@keyframes orbitPulse8 {
+  0%, 100% { opacity: 0.56; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.85; transform: rotateX(68deg) scale(1.03); }
+}
+@keyframes orbitPulse9 {
+  0%, 100% { opacity: 0.64; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.7; transform: rotateX(68deg) scale(1.04); }
+}
+@keyframes orbitPulse10 {
+  0%, 100% { opacity: 0.72; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.75; transform: rotateX(68deg) scale(1.02); }
+}
+@keyframes orbitPulse11 {
+  0%, 100% { opacity: 0.4; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.7999999999999999; transform: rotateX(68deg) scale(1.03); }
+}
+@keyframes orbitPulse12 {
+  0%, 100% { opacity: 0.48000000000000004; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.85; transform: rotateX(68deg) scale(1.04); }
+}
+@keyframes orbitPulse13 {
+  0%, 100% { opacity: 0.56; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.7; transform: rotateX(68deg) scale(1.02); }
+}
+@keyframes orbitPulse14 {
+  0%, 100% { opacity: 0.64; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.75; transform: rotateX(68deg) scale(1.03); }
+}
+@keyframes orbitPulse15 {
+  0%, 100% { opacity: 0.72; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.7999999999999999; transform: rotateX(68deg) scale(1.04); }
+}
+@keyframes orbitPulse16 {
+  0%, 100% { opacity: 0.4; transform: rotateX(68deg) scale(1); }
+  50% { opacity: 0.85; transform: rotateX(68deg) scale(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring { animation: none !important; }
+}
+
+@media (max-width: 600px) {
+  .wrap { transform: scale(0.85); }
+}

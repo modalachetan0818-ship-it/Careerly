@@ -1,0 +1,319 @@
+.section {
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #faf8f3;
+}
+
+.bgPlate {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("/services/svc-path-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.62;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 85% 15%, rgba(232, 200, 74, 0.1), transparent 42%),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.64) 0%,
+      rgba(250, 248, 243, 0.48) 50%,
+      rgba(255, 255, 255, 0.68) 100%
+    );
+}
+
+.section :global(.container) {
+  position: relative;
+  z-index: 2;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) 1.2fr;
+  gap: 2rem;
+  align-items: start;
+  perspective: 1400px;
+}
+
+.railCol {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.railTrack {
+  position: absolute;
+  left: 0.35rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: rgba(201, 162, 39, 0.18);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.railFill {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--gold-deep), var(--gold-light));
+  transform-origin: top center;
+}
+
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stepItem { list-style: none; }
+
+.stepBtn {
+  width: 100%;
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0.85rem 0.9rem;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--ink);
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stepBtn:hover {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(201, 162, 39, 0.25);
+}
+
+.stepBtnOn {
+  background: linear-gradient(145deg, #ffffff, #faf8f3);
+  border-color: rgba(201, 162, 39, 0.4);
+  box-shadow: 0 12px 28px rgba(201, 162, 39, 0.12);
+}
+
+.stepNum {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold-deep);
+  padding-top: 0.15rem;
+}
+
+.stepLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.stepLabel strong {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.stepLabel small {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.detailCol {
+  transform-style: preserve-3d;
+  min-height: 22rem;
+}
+
+.detailEyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 0.45rem;
+}
+
+.detailTitle {
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+  margin-bottom: 0.45rem;
+}
+
+.detailLead {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.65rem;
+}
+
+.detailBody {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.checkpoints {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.checkpoint {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(201, 162, 39, 0.18);
+  transform: translateZ(12px);
+}
+
+.cpLabel {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.cpHint {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.pathDepth1 {
+  transform: translateZ(10px) rotateY(2deg);
+}
+.pathDepth2 {
+  transform: translateZ(13px) rotateY(1deg);
+}
+.pathDepth3 {
+  transform: translateZ(16px) rotateY(0deg);
+}
+.pathDepth4 {
+  transform: translateZ(19px) rotateY(1deg);
+}
+.pathDepth5 {
+  transform: translateZ(22px) rotateY(2deg);
+}
+.pathDepth6 {
+  transform: translateZ(25px) rotateY(2deg);
+}
+.pathDepth7 {
+  transform: translateZ(28px) rotateY(1deg);
+}
+.pathDepth8 {
+  transform: translateZ(31px) rotateY(0deg);
+}
+.pathDepth9 {
+  transform: translateZ(34px) rotateY(1deg);
+}
+.pathDepth10 {
+  transform: translateZ(37px) rotateY(2deg);
+}
+.pathDepth11 {
+  transform: translateZ(40px) rotateY(2deg);
+}
+.pathDepth12 {
+  transform: translateZ(43px) rotateY(1deg);
+}
+.pathDepth13 {
+  transform: translateZ(46px) rotateY(0deg);
+}
+.pathDepth14 {
+  transform: translateZ(49px) rotateY(1deg);
+}
+.pathDepth15 {
+  transform: translateZ(52px) rotateY(2deg);
+}
+.pathDepth16 {
+  transform: translateZ(55px) rotateY(2deg);
+}
+.pathDepth17 {
+  transform: translateZ(58px) rotateY(1deg);
+}
+.pathDepth18 {
+  transform: translateZ(61px) rotateY(0deg);
+}
+.pathDepth19 {
+  transform: translateZ(64px) rotateY(1deg);
+}
+.pathDepth20 {
+  transform: translateZ(67px) rotateY(2deg);
+}
+
+@keyframes railGlow1 {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; filter: brightness(1.05); }
+}
+@keyframes railGlow2 {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; filter: brightness(1.1); }
+}
+@keyframes railGlow3 {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; filter: brightness(1.1500000000000001); }
+}
+@keyframes railGlow4 {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; filter: brightness(1.05); }
+}
+@keyframes railGlow5 {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; filter: brightness(1.1); }
+}
+@keyframes railGlow6 {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; filter: brightness(1.1500000000000001); }
+}
+@keyframes railGlow7 {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; filter: brightness(1.05); }
+}
+@keyframes railGlow8 {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; filter: brightness(1.1); }
+}
+@keyframes railGlow9 {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; filter: brightness(1.1500000000000001); }
+}
+@keyframes railGlow10 {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; filter: brightness(1.05); }
+}
+@keyframes railGlow11 {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; filter: brightness(1.1); }
+}
+@keyframes railGlow12 {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; filter: brightness(1.1500000000000001); }
+}
+@keyframes railGlow13 {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; filter: brightness(1.05); }
+}
+@keyframes railGlow14 {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; filter: brightness(1.1); }
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 1.5rem; }
+  .railCol { padding-left: 0; }
+  .railTrack { display: none; }
+  .stepList { display: grid; grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .stepList { grid-template-columns: 1fr; }
+  .detailCol { min-height: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .railFill { transform: none !important; }
+}

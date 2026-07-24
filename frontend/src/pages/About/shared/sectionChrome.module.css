@@ -1,0 +1,112 @@
+.shell {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 4.5rem 0;
+  background: var(--cream);
+}
+
+.shell :global(.container) {
+  position: relative;
+  z-index: 2;
+}
+
+.shellSoft {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 4.5rem 0;
+  background: #f7f4ec;
+}
+
+.shellSoft :global(.container) {
+  position: relative;
+  z-index: 2;
+}
+
+.bgPlate {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.55;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 70% 55% at 50% 30%,
+      rgba(255, 255, 255, 0.5),
+      transparent 70%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(250, 248, 243, 0.72) 0%,
+      rgba(250, 248, 243, 0.55) 45%,
+      rgba(250, 248, 243, 0.78) 100%
+    );
+}
+
+.head {
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+
+.headCenter {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headCenter .rule {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.headCenter .lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 0.65rem;
+}
+
+.rule {
+  width: 3.25rem;
+  height: 2px;
+  margin: 0.85rem 0 1rem;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold-light));
+  border-radius: 2px;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 36rem;
+}
+
+@media (max-width: 700px) {
+  .shell,
+  .shellSoft {
+    padding: 3.25rem 0;
+  }
+
+  .lead {
+    font-size: 0.98rem;
+  }
+}

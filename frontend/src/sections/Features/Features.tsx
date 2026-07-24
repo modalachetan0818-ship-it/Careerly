@@ -9,12 +9,12 @@ export type FeatureItem = {
 };
 
 const FEATURE_IMAGES = [
-  "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=640&q=60",
-  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=640&q=60",
-  "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=640&q=60",
-  "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=640&q=60",
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=640&q=60",
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=640&q=60",
+  "/home/grow/01-career-clarity.png",
+  "/home/grow/02-skill-pathways.png",
+  "/home/grow/03-resume-profile-polish.jpg",
+  "/home/grow/04-interview-readiness.png",
+  "/home/grow/05-mentor-support.png",
+  "/home/grow/06-end-to-end-guidance.png",
 ];
 
 type Props = {
