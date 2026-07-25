@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { GOOGLE_FORM_URL } from "../../constants/links";
 import { getJobById, formatPostedDate } from "../../data/jobs";
 import styles from "./JobDetail.module.css";
 
@@ -91,9 +92,14 @@ export function JobDetail() {
               >
                 Apply for this role
               </Link>
-              <Link to="/contact" className={`btn btn-ghost ${styles.sideGhost}`}>
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`btn btn-ghost ${styles.sideGhost}`}
+              >
                 Ask a question
-              </Link>
+              </a>
             </div>
           </aside>
         </div>

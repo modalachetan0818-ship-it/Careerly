@@ -39,16 +39,3 @@ export async function fetchHomeContent(): Promise<HomeContent | null> {
     return null;
   }
 }
-
-export async function submitContact(payload: {
-  name: string;
-  email: string;
-  phone?: string;
-  subject?: string;
-  message: string;
-}) {
-  return request<{ ok: boolean; message: string }>("/contact", {
-    method: "POST",
-    body: JSON.stringify(payload),
-  });
-}

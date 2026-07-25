@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
 import { CareerlyHeroFX } from "../../components/CareerlyHeroFX/CareerlyHeroFX";
+import { GOOGLE_FORM_URL } from "../../constants/links";
 import styles from "./Hero.module.css";
 
 function playWhenReady(video: HTMLVideoElement | null) {
@@ -73,9 +74,14 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Link to="/contact" className={`btn btn-gold ${styles.ctaPrimary}`}>
+          <a
+            href={GOOGLE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`btn btn-gold ${styles.ctaPrimary}`}
+          >
             Contact Us
-          </Link>
+          </a>
           <Link to="/services" className={`btn ${styles.ctaGhost}`}>
             Our Services
           </Link>

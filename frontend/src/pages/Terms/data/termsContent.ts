@@ -1,3 +1,4 @@
+import { GOOGLE_FORM_URL } from "../../../constants/links";
 import type { LegalHero, LegalSection } from "../../shared/LegalDocument";
 
 export const TERMS_HERO: LegalHero = {
@@ -6,7 +7,7 @@ export const TERMS_HERO: LegalHero = {
   title: "Careerly Terms & Conditions",
   lead: "The ground rules for using Careerly’s website and career-support services — written for candidates, visitors, and partners in Bengaluru and beyond.",
   primaryCta: { label: "Browse sections", href: "#quick-nav" },
-  secondaryCta: { label: "Contact us", href: "/contact" },
+  secondaryCta: { label: "Contact us", href: GOOGLE_FORM_URL },
 };
 
 export const TERMS_INTRO =

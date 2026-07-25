@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SocialFlipButton from "../../SocialFlipButton/SocialFlipButton";
+import { GOOGLE_FORM_URL } from "../../../constants/links";
 import styles from "./Footer.module.css";
 
 export function Footer() {
@@ -39,7 +40,13 @@ export function Footer() {
               <Link to="/about">About Us</Link>
             </li>
             <li>
-              <Link to="/contact">Contact Us</Link>
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Contact Us
+              </a>
             </li>
           </ul>
         </div>

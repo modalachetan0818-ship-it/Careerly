@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { PRESENCE } from "../../data";
 import { Reveal } from "../../shared/Reveal";
 import { SectionHeader } from "../../shared/SectionHeader";
@@ -56,9 +55,14 @@ export function PresenceContact() {
             </dl>
 
             <div className={styles.cta}>
-              <Link to={PRESENCE.cta.to} className="btn btn-gold">
+              <a
+                href={PRESENCE.cta.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-gold"
+              >
                 {PRESENCE.cta.label}
-              </Link>
+              </a>
             </div>
           </div>
         </Reveal>

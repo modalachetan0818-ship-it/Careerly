@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
+import { GOOGLE_FORM_URL } from "../../../../constants/links";
 import { springSoft, VIEWPORT } from "../../motion/springs";
 import { hoverSafe } from "../../motion/reducedMotion";
 import styles from "./ClarityCTA.module.css";
@@ -29,9 +30,14 @@ export function ClarityCTA() {
           </p>
           <div className={styles.actions}>
             <motion.div whileHover={hoverSafe(reduce, { y: -3, scale: 1.02 })}>
-              <Link to="/contact" className="btn btn-gold">
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-gold"
+              >
                 Talk to Careerly
-              </Link>
+              </a>
             </motion.div>
             <motion.div whileHover={hoverSafe(reduce, { y: -2 })}>
               <Link to="/about" className={`btn btn-ghost ${styles.ghost}`}>

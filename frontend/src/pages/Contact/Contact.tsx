@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { submitContact } from "../../api/client";
 import { ContactHero } from "./ContactHero";
 import styles from "./Contact.module.css";
 
@@ -24,6 +23,32 @@ const empty: FormState = {
   message: "",
 };
 
+function getWeb3FormsConfig() {
+  const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY?.trim();
+  const toEmail = import.meta.env.VITE_WEB3FORMS_TO_EMAIL?.trim();
+
+  if (!accessKey || !toEmail) {
+    return null;
+  }
+
+  return { accessKey, toEmail };
+}
+
+function buildEmailBody(form: FormState): string {
+  const lines = [
+    `Name: ${form.name.trim()}`,
+    `Email: ${form.email.trim()}`,
+    `Phone: ${form.phone.trim() || "—"}`,
+    `Subject: ${form.subject.trim() || "—"}`,
+    "",
+    "Message:",
+    form.message.trim(),
+    "",
+    "Sent from Careerly website contact page",
+  ];
+  return lines.join("\n");
+}
+
 export function Contact() {
   const reduce = useReducedMotion();
   const [form, setForm] = useState<FormState>(empty);
@@ -44,13 +69,50 @@ export function Contact() {
     return Object.keys(next).length === 0;
   };
 
+  const web3Config = getWeb3FormsConfig();
+
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
+
+    if (!web3Config) {
+      setSubmitError(
+        "Contact form is not configured. Set VITE_WEB3FORMS_ACCESS_KEY and VITE_WEB3FORMS_TO_EMAIL (local .env or Vercel Environment Variables), then redeploy.",
+      );
+      return;
+    }
+
     setSubmitting(true);
     setSubmitError("");
     try {
-      await submitContact(form);
+      const { accessKey, toEmail } = web3Config;
+      const name = form.name.trim();
+      const subject = form.subject.trim();
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `Careerly contact: ${subject || name}`,
+          from_name: "Careerly Website",
+          to: toEmail,
+          name,
+          email: form.email.trim(),
+          phone: form.phone.trim() || "—",
+          message: buildEmailBody(form),
+        }),
+      });
+
+      const result = (await response.json()) as {
+        success?: boolean;
+        message?: string;
+      };
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Could not send message");
+      }
+
       setSent(true);
     } catch (err) {
       setSubmitError(

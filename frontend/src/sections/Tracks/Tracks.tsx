@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
+import { GOOGLE_FORM_URL } from "../../constants/links";
 import styles from "./Tracks.module.css";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -10,6 +11,7 @@ const tracks = [
     text: "Development, QA, data, and cloud pathways for freshers and experienced talent — with guidance at every step.",
     points: ["Skill mapping", "Tech interview prep", "Role-fit clarity"],
     to: "/services",
+    external: false,
     cta: "Explore Services",
     btnClass: "btn btn-gold",
     alt: false,
@@ -18,7 +20,8 @@ const tracks = [
     title: "Non-IT Careers",
     text: "HR, sales, administration, counseling, and business paths across Bengaluru — shaped around your goals.",
     points: ["Career counseling", "Profile polish", "Interview readiness"],
-    to: "/contact",
+    to: GOOGLE_FORM_URL,
+    external: true,
     cta: "Talk to Us",
     btnClass: "btn btn-primary",
     alt: true,
@@ -83,9 +86,20 @@ export function Tracks() {
                   <li key={point}>{point}</li>
                 ))}
               </ul>
-              <Link to={track.to} className={track.btnClass}>
-                {track.cta}
-              </Link>
+              {track.external ? (
+                <a
+                  href={track.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={track.btnClass}
+                >
+                  {track.cta}
+                </a>
+              ) : (
+                <Link to={track.to} className={track.btnClass}>
+                  {track.cta}
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>

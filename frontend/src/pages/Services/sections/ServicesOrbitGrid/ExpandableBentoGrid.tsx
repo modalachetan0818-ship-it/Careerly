@@ -1,8 +1,8 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { Link } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { IoClose } from "react-icons/io5";
+import { GOOGLE_FORM_URL } from "../../../../constants/links";
 import type { CareerlyService } from "../../data/servicesCatalog";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
 import { springSnappy, STAGGER, VIEWPORT } from "../../motion/springs";
@@ -99,13 +99,15 @@ export function ExpandableBentoGrid({ services }: ExpandableBentoGridProps) {
                     </motion.h3>
                     <p className={styles.modalSummary}>{active.summary}</p>
                   </div>
-                  <Link
-                    to="/contact"
+                  <a
+                    href={GOOGLE_FORM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={styles.cta}
                     onClick={() => setActive(null)}
                   >
                     Get in touch
-                  </Link>
+                  </a>
                 </div>
 
                 <motion.div

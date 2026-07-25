@@ -44,6 +44,10 @@ function isAppPath(href: string) {
   return href.startsWith("/") && !href.startsWith("//");
 }
 
+function isExternalHttp(href: string) {
+  return /^https?:\/\//i.test(href);
+}
+
 function HeroCta({ cta, className, whileHover, whileTap }: HeroCtaProps) {
   if (isAppPath(cta.href)) {
     return (
@@ -58,12 +62,17 @@ function HeroCta({ cta, className, whileHover, whileTap }: HeroCtaProps) {
     );
   }
 
+  const external = isExternalHttp(cta.href);
+
   return (
     <motion.a
       href={cta.href}
       className={className}
       whileHover={whileHover}
       whileTap={whileTap}
+      {...(external
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
     >
       {cta.label}
     </motion.a>

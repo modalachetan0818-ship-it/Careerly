@@ -379,36 +379,56 @@
   background: #faf8f3;
 }
 
-.bgPlate {
+.plainField {
   position: absolute;
   inset: 0;
   z-index: 0;
-  pointer-events: none;
-  background-image: url("/home/home-steps-bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.65;
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 15%, rgba(232, 200, 74, 0.08), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 85%, rgba(201, 162, 39, 0.05), transparent 50%),
+    #faf8f3;
 }
 
-.scrim {
+.bgWash {
   position: absolute;
-  inset: 0;
+  inset: -8% 0;
   z-index: 1;
   pointer-events: none;
+  opacity: 0.38;
+}
+
+.bgWash img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+}
+
+.veil {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
   background:
-    radial-gradient(ellipse at 50% 20%, rgba(232, 200, 74, 0.1), transparent 50%),
     linear-gradient(
       180deg,
+      rgba(250, 248, 243, 0.92) 0%,
+      rgba(250, 248, 243, 0.58) 28%,
+      rgba(250, 248, 243, 0.42) 55%,
+      rgba(250, 248, 243, 0.9) 100%
+    ),
+    linear-gradient(
+      90deg,
       rgba(255, 255, 255, 0.55) 0%,
-      rgba(250, 248, 243, 0.42) 45%,
-      rgba(255, 255, 255, 0.62) 100%
+      rgba(255, 255, 255, 0.18) 50%,
+      rgba(255, 252, 245, 0.4) 100%
     );
 }
 
 .pillarsSection :global(.container) {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .pillarCarousel {

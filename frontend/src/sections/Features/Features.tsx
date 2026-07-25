@@ -32,11 +32,16 @@ export function Features({ items }: Props) {
 
   return (
     <section className={`section ${styles.featuresSection}`}>
-      <div className={styles.featuresBg} aria-hidden>
-        <span className={styles.featuresOrb} />
-        <span className={styles.featuresOrbAlt} />
-        <span className={styles.featuresMesh} />
+      <div className={styles.plainField} aria-hidden />
+      <div className={styles.bgWash} aria-hidden>
+        <img
+          src="/home/home-features-bg.png"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
       </div>
+      <div className={styles.veil} aria-hidden />
       <div className="container">
         <motion.div
           className={styles.sectionHead}

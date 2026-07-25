@@ -27,8 +27,16 @@ export function Pillars({ items }: Props) {
 
   return (
     <section className={`section ${styles.pillarsSection}`}>
-      <div className={styles.bgPlate} aria-hidden />
-      <div className={styles.scrim} aria-hidden />
+      <div className={styles.plainField} aria-hidden />
+      <div className={styles.bgWash} aria-hidden>
+        <img
+          src="/home/home-steps-bg.png"
+          alt=""
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div className={styles.veil} aria-hidden />
       <div className="container">
         <motion.div
           className={styles.sectionHead}

@@ -3,6 +3,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Navbar } from "../Navbar/Navbar";
 import { Footer } from "../Footer/Footer";
 import { SplashLoader } from "../../SplashLoader/SplashLoader";
+import { ScrollToTop } from "../../ScrollToTop/ScrollToTop";
 
 export function Layout() {
   const location = useLocation();
@@ -10,6 +11,7 @@ export function Layout() {
 
   return (
     <>
+      <ScrollToTop />
       <SplashLoader />
       <Navbar />
       <AnimatePresence mode="wait">

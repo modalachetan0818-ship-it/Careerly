@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { GOOGLE_FORM_URL } from "../../../constants/links";
 import styles from "./Navbar.module.css";
 
 const links = [
@@ -67,9 +68,14 @@ export function Navbar() {
         </nav>
 
         <div className={styles.actions}>
-          <Link to="/contact" className={`btn btn-gold ${styles.cta}`}>
+          <a
+            href={GOOGLE_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`btn btn-gold ${styles.cta}`}
+          >
             Contact
-          </Link>
+          </a>
           <button
             type="button"
             className={styles.menuBtn}
@@ -113,13 +119,15 @@ export function Navbar() {
                 </NavLink>
               </motion.div>
             ))}
-            <Link
-              to="/contact"
+            <a
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`btn btn-gold ${styles.mobileCta}`}
               onClick={() => setOpen(false)}
             >
               Contact
-            </Link>
+            </a>
           </motion.nav>
         )}
       </AnimatePresence>

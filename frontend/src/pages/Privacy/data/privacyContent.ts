@@ -1,3 +1,4 @@
+import { GOOGLE_FORM_URL } from "../../../constants/links";
 import type { LegalHero, LegalSection } from "../../shared/LegalDocument";
 
 export const PRIVACY_HERO: LegalHero = {
@@ -6,7 +7,7 @@ export const PRIVACY_HERO: LegalHero = {
   title: "Careerly Privacy Policy",
   lead: "How Careerly — your Bengaluru career partner — collects, uses, and protects information when you visit our site or seek IT & Non-IT career guidance.",
   primaryCta: { label: "Browse sections", href: "#quick-nav" },
-  secondaryCta: { label: "Contact us", href: "/contact" },
+  secondaryCta: { label: "Contact us", href: GOOGLE_FORM_URL },
 };
 
 export const PRIVACY_INTRO =

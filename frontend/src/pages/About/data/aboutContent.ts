@@ -1,8 +1,10 @@
+import { GOOGLE_FORM_URL } from "../../../constants/links";
+
 export const ABOUT_HERO = {
   eyebrow: "About us",
   title: "About Careerly",
   lead: "Your Career. Our Mission. Success Together. — clear guidance and placements for IT and Non-IT paths in Bengaluru and beyond.",
-  primaryCta: { label: "Talk to us", href: "/contact" },
+  primaryCta: { label: "Talk to us", href: GOOGLE_FORM_URL },
   secondaryCta: { label: "Explore services", href: "/services" },
 } as const;
 
@@ -146,5 +148,5 @@ export const PRESENCE = {
   phoneHref: "tel:+919686448306",
   webDisplay: "careerly.info",
   webHref: "https://careerly.info",
-  cta: { label: "Contact us", to: "/contact" },
+  cta: { label: "Contact us", href: GOOGLE_FORM_URL },
 } as const;
