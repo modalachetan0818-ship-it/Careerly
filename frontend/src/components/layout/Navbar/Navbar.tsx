@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { GOOGLE_FORM_URL } from "../../../constants/links";
 import styles from "./Navbar.module.css";
@@ -12,8 +12,14 @@ const links = [
 ];
 
 export function Navbar() {
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  // Close the drawer on any route change (covers link click + browser back).
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   useEffect(() => {
     let ticking = false;
